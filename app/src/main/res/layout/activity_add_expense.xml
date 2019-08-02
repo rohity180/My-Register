@@ -7,7 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mafh.myregister.AddExpense"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:animateLayoutChanges="true">
 
     <!--<HorizontalScrollView
         android:id="@+id/scroll"
@@ -17,14 +18,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            >
 
 
             <LinearLayout
                 android:id="@+id/layout_label_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                android:padding="20dp"
+                android:background="?android:attr/selectableItemBackground">
 
                 <TextView
                     android:id="@+id/label_1"
@@ -49,9 +55,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/layout_container_1"
+                android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layoutDirection="ltr"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                android:animateLayoutChanges="true">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="110dp"
@@ -171,12 +187,16 @@
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layout_label_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                android:padding="20dp"
+                android:background="?android:attr/selectableItemBackground">
 
                 <TextView
                     android:id="@+id/label_2"
@@ -191,13 +211,18 @@
                     android:id="@+id/label_2_arrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="95dp"
                     android:layout_marginTop="12dp"
                     android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
 
             </LinearLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_container_2"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -896,7 +921,8 @@
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:columnCount="6">
+                    android:columnCount="6"
+                    android:animateLayoutChanges="true">
 
                     <TextView
                         android:id="@+id/textview_white_bag"
@@ -1501,7 +1527,7 @@
 
                 </GridLayout>
 
-
+            </LinearLayout>
 
             </LinearLayout>
 
@@ -1511,7 +1537,9 @@
                 android:id="@+id/layout_label_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:background="?android:attr/selectableItemBackground">
 
                 <TextView
                     android:id="@+id/label_3"
@@ -1530,6 +1558,14 @@
                     android:layout_marginTop="12dp"
                     android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layout_container_3">
 
             </LinearLayout>
 
