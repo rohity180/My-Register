@@ -6,101 +6,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mafh.myregister.AddExpense"
+    android:animateLayoutChanges="true"
     android:orientation="vertical"
-    android:animateLayoutChanges="true">
+    tools:context="com.mafh.myregister.AddExpense">
 
     <!--<HorizontalScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">-->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+
         <LinearLayout
+            android:id="@+id/layout_label_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:animateLayoutChanges="true"
-            >
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="1.  Basic Details"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/label_1_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_container_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <LinearLayout
-                android:id="@+id/layout_label_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:animateLayoutChanges="true"
-                android:padding="20dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <TextView
-                    android:id="@+id/label_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="10dp"
-                    android:text="1.  Basic Details"
-                    android:textSize="20dp" />
-
-                <ImageView
-                    android:id="@+id/label_1_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/layout_container_1"
-                android:orientation="vertical">
-
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layoutDirection="ltr"
-                android:paddingTop="10dp"
-                android:animateLayoutChanges="true">
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="110dp"
                     android:layout_height="60dp"
                     android:hint="Media"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/media"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/media"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
+
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="150dp"
                     android:layout_height="60dp"
                     android:hint="Field Report No."
                     android:paddingLeft="10dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/f_r_n"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/f_r_n"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
+
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="130dp"
                     android:layout_height="60dp"
                     android:hint="Party No."
                     android:paddingLeft="10dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/party_numbers"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/party_numbers"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -111,20 +114,23 @@
                     android:layout_height="60dp"
                     android:hint="Packers Name:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/packers_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/packers_name"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
+
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="Client Names:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/client_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/client_name"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -139,10 +145,11 @@
                     android:layout_height="60dp"
                     android:hint="Quotation Number:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/quotation_number"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/quotation_number"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -150,11 +157,12 @@
                     android:layout_height="60dp"
                     android:hint="Shifting Date:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/shifting_date"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/shifting_date"
-                        android:inputType="date"/>
+                        android:inputType="date" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
@@ -169,10 +177,11 @@
                     android:layout_height="60dp"
                     android:hint="From:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/from"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/from"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -180,49 +189,52 @@
                     android:layout_height="60dp"
                     android:hint="To:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/to"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/to"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
-            </LinearLayout>
+        </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/layout_label_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:animateLayoutChanges="true"
-                android:padding="20dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <TextView
-                    android:id="@+id/label_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="10dp"
-                    android:text="2.  Labours And Items"
-                    android:textSize="20dp" />
-
-                <ImageView
-                    android:id="@+id/label_2_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="95dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
-
-
-            </LinearLayout>
         <LinearLayout
+            android:id="@+id/layout_label_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="2.  Labours And Items"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/label_2_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/layout_container_2"
-            android:orientation="vertical"
-            android:animateLayoutChanges="true">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -234,11 +246,13 @@
                     android:layout_height="60dp"
                     android:hint="Labour Name:"
                     android:paddingLeft="15dp">
+
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/labour_name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/labour_name"/>
+                        android:layout_height="match_parent" />
                 </android.support.design.widget.TextInputLayout>
+
                 <TextView
                     android:id="@+id/textview_items"
                     android:layout_width="wrap_content"
@@ -921,8 +935,8 @@
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:columnCount="6"
-                    android:animateLayoutChanges="true">
+                    android:animateLayoutChanges="true"
+                    android:columnCount="6">
 
                     <TextView
                         android:id="@+id/textview_white_bag"
@@ -932,16 +946,19 @@
                         android:layout_marginTop="25dp"
                         android:text="White Bag:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/white_bag_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/white_bag_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_white_bag_x"
                         android:layout_width="wrap_content"
@@ -950,17 +967,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/white_bag_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/white_bag_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_white_bag_equal"
                         android:layout_width="wrap_content"
@@ -975,14 +995,13 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/white_bag_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/white_bag_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
-
-
 
 
                     <TextView
@@ -993,17 +1012,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Stretch Film:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/stretch_film_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/stretch_film_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_stretch_film_x"
                         android:layout_width="wrap_content"
@@ -1012,17 +1034,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/stretch_film_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/stretch_film_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_stretch_film_equal"
                         android:layout_width="wrap_content"
@@ -1037,11 +1062,12 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/stretch_film_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/stretch_film_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
                     <TextView
@@ -1052,17 +1078,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Roll:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/roll_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/roll_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_roll_x"
                         android:layout_width="wrap_content"
@@ -1071,17 +1100,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/roll_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/roll_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_roll_equal"
                         android:layout_width="wrap_content"
@@ -1096,11 +1128,12 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/roll_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/roll_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
                     <TextView
@@ -1111,17 +1144,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Tape:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/tape_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/tape_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_tape_x"
                         android:layout_width="wrap_content"
@@ -1130,17 +1166,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/tape_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/tape_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_tape_equal"
                         android:layout_width="wrap_content"
@@ -1155,11 +1194,12 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/tape_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/tape_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
                     <TextView
@@ -1170,17 +1210,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Rassi:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/rassi_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/rassi_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_rassi_x"
                         android:layout_width="wrap_content"
@@ -1189,17 +1232,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/rassi_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/rassi_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_rassi_equal"
                         android:layout_width="wrap_content"
@@ -1214,13 +1260,13 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/rassi_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/rassi_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
-
 
 
                     <TextView
@@ -1231,17 +1277,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Bubble:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/bubble_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/bubble_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_bubble_x"
                         android:layout_width="wrap_content"
@@ -1250,17 +1299,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/bubble_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/bubble_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_bubble_equal"
                         android:layout_width="wrap_content"
@@ -1275,13 +1327,13 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/bubble_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/bubble_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
-
 
 
                     <TextView
@@ -1292,17 +1344,20 @@
                         android:layout_marginTop="25dp"
                         android:text="News Papers:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/newspapers_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/newspapers_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_newspapers_x"
                         android:layout_width="wrap_content"
@@ -1311,17 +1366,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/newspapers_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/newspapers_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_newspapers_equal"
                         android:layout_width="wrap_content"
@@ -1336,11 +1394,12 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/newspapers_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/newspapers_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
 
@@ -1352,17 +1411,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Crate Plastic:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/crate_plastic_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/crate_plastic_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_crate_plastic_x"
                         android:layout_width="wrap_content"
@@ -1371,17 +1433,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/crate_plastic_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/crate_plastic_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_crate_plastic_equal"
                         android:layout_width="wrap_content"
@@ -1396,11 +1461,12 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/crate_plastic_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/crate_plastic_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
 
@@ -1412,17 +1478,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Blanket:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/blanket_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/blanket_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_blanket_x"
                         android:layout_width="wrap_content"
@@ -1431,17 +1500,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/blanket_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/blanket_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_blanket_equal"
                         android:layout_width="wrap_content"
@@ -1456,11 +1528,12 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/blanket_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/blanket_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
 
@@ -1472,17 +1545,20 @@
                         android:layout_marginTop="25dp"
                         android:text="Cartoon:"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="90dp"
                         android:layout_height="60dp"
                         android:hint="Quantity"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/cartoon_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/cartoon_quantity"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_cartoon_x"
                         android:layout_width="wrap_content"
@@ -1491,17 +1567,20 @@
                         android:layout_marginTop="25dp"
                         android:text="X"
                         android:textSize="15dp" />
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="70dp"
                         android:layout_height="60dp"
                         android:hint="Rate"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/cartoon_rate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/cartoon_rate"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
+
                     <TextView
                         android:id="@+id/textview_cartoon_equal"
                         android:layout_width="wrap_content"
@@ -1516,69 +1595,172 @@
                         android:layout_height="60dp"
                         android:hint="Total"
                         android:paddingLeft="5dp">
+
                         <android.support.design.widget.TextInputEditText
+                            android:id="@+id/cartoon_total"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/cartoon_total"
-                            android:inputType="number"/>
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
-
 
 
                 </GridLayout>
 
             </LinearLayout>
 
-            </LinearLayout>
+        </LinearLayout>
 
-            <!--3rd form begins here-->
+        <!--3rd form begins here-->
 
-            <LinearLayout
-                android:id="@+id/layout_label_3"
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/layout_label_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/label_3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="20dp"
-                android:background="?android:attr/selectableItemBackground">
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="3.  Payments or Charges"
+                android:textSize="20dp" />
 
-                <TextView
-                    android:id="@+id/label_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="10dp"
-                    android:text="3.  Payments or Charges"
-                    android:textSize="20dp" />
-
-                <ImageView
-                    android:id="@+id/label_3_arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/label_3_arrow"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/layout_container_3">
-
-            </LinearLayout>
-
-            <!--form begins-->
-
-
-
-
-
-
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_container_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:id="@+id/cont_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4">
+
+                <TextView
+                    android:id="@+id/textview_ac_mech_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Ac Mechanic\nPayment:"
+                    android:textSize="18dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:hint="Total"
+                    android:paddingLeft="5dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/ac_mech_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textview_ac_mech_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Name:"
+                    android:textSize="18dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:hint="Name"
+                    android:paddingLeft="5dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/ac_mech_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textview_carpenter_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Carpenter\nPayment:"
+                    android:textSize="18dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:hint="Total"
+                    android:paddingLeft="5dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/carpenter_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textview_carpenter_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Name:"
+                    android:textSize="18dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:hint="Name"
+                    android:paddingLeft="5dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/carpenter_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+            </GridLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="370dp"
+                android:layout_height="60dp"
+                android:hint="Labour Charges"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/labour_charges"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <!--form begins-->
+
+
+    </LinearLayout>
 
 
     <!--</HorizontalScrollView>-->
