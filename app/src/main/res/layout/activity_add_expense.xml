@@ -29,7 +29,8 @@
             android:animateLayoutChanges="true"
             android:background="?android:attr/selectableItemBackground"
             android:orientation="horizontal"
-            android:padding="20dp">
+            android:padding="20dp"
+            >
 
             <TextView
                 android:id="@+id/label_1"
@@ -1742,9 +1743,11 @@
 
             </GridLayout>
 
+
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="370dp"
-                android:layout_height="60dp"
+                android:layout_height="70dp"
                 android:hint="Labour Charges"
                 android:paddingLeft="30dp"
                 android:paddingTop="10dp">
@@ -1755,6 +1758,211 @@
                     android:layout_height="match_parent"
                     android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textview_vehicle_charges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Local Vehicle Charges:"
+                android:textSize="20dp" />
+
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:hint="vehicle no."
+                    android:paddingLeft="30dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/vehicle_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:hint="Charges"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/vehicle_charges"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:hint="Diesel"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/vehicle_diesel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:hint="Police"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/vehicle_police"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+            </GridLayout>
+
+<!--<view style="@style/Divider"> </view>-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/darker_gray"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:hint="Domestic Charges"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/domestic_charges"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="60dp"
+                android:hint="Bus / Auto / Train Fare"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/bus_auto_train_fare"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:hint="Goods damage / Less Amount By Party"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/damage_less_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/darker_gray"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:hint="Quotation Amount"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/quotation_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+           <!-- <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="60dp"
+                android:hint="Total Expenses"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/total_expenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>-->
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:hint="Executive Advance"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/executive_advance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:hint="Total Expenses"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/total_expenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="360dp"
+                android:layout_height="70dp"
+                android:hint="Total Balance(Profit)"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/total_balance_profit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
         </LinearLayout>
 
         <!--form begins-->
